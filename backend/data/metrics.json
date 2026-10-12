@@ -1,0 +1,144 @@
+{
+  "dataset": {
+    "total_samples": 1500,
+    "train_samples": 1200,
+    "test_samples": 300,
+    "synthetic_documentation": "Synthetic dataset generated via multi-parameter Gaussian/Lognormal disaster scenario distribution incorporating casualties, population displacement, infrastructure damage, and accessibility constraints.",
+    "class_counts": {
+      "Critical": 553,
+      "Low": 362,
+      "Medium": 296,
+      "High": 289
+    }
+  },
+  "model_type": "Random Forest Classifier (Ensemble of 120 trees, max_depth=12)",
+  "classes": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "evaluation_metrics": {
+    "accuracy": 0.8633,
+    "precision_weighted": 0.8568,
+    "recall_weighted": 0.8633,
+    "f1_weighted": 0.8571,
+    "precision_macro": 0.8464,
+    "recall_macro": 0.8281,
+    "f1_macro": 0.8341
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Low",
+      "Medium",
+      "High",
+      "Critical"
+    ],
+    "matrix": [
+      [
+        70,
+        2,
+        0,
+        0
+      ],
+      [
+        4,
+        44,
+        11,
+        0
+      ],
+      [
+        0,
+        8,
+        35,
+        15
+      ],
+      [
+        0,
+        0,
+        1,
+        110
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Low": {
+      "precision": 0.9459,
+      "recall": 0.9722,
+      "f1_score": 0.9589,
+      "support": 72
+    },
+    "Medium": {
+      "precision": 0.8148,
+      "recall": 0.7458,
+      "f1_score": 0.7788,
+      "support": 59
+    },
+    "High": {
+      "precision": 0.7447,
+      "recall": 0.6034,
+      "f1_score": 0.6667,
+      "support": 58
+    },
+    "Critical": {
+      "precision": 0.88,
+      "recall": 0.991,
+      "f1_score": 0.9322,
+      "support": 111
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "affected_population",
+      "importance": 0.292
+    },
+    {
+      "feature": "reported_casualties",
+      "importance": 0.1983
+    },
+    {
+      "feature": "infrastructure_damage",
+      "importance": 0.1236
+    },
+    {
+      "feature": "economic_loss_lakhs",
+      "importance": 0.1226
+    },
+    {
+      "feature": "hospital_overwhelmed_pct",
+      "importance": 0.0929
+    },
+    {
+      "feature": "weather_risk_index",
+      "importance": 0.0763
+    },
+    {
+      "feature": "accessibility_score",
+      "importance": 0.0755
+    },
+    {
+      "feature": "disaster_type_Flood",
+      "importance": 0.0042
+    },
+    {
+      "feature": "disaster_type_Industrial Hazard",
+      "importance": 0.0035
+    },
+    {
+      "feature": "disaster_type_Landslide",
+      "importance": 0.0032
+    },
+    {
+      "feature": "disaster_type_Earthquake",
+      "importance": 0.003
+    },
+    {
+      "feature": "disaster_type_Cyclone",
+      "importance": 0.0029
+    },
+    {
+      "feature": "disaster_type_Wildfire",
+      "importance": 0.002
+    }
+  ]
+}
